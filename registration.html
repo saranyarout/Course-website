@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<style>
+    body{
+        background-color: #0c0116;
+        color: white;
+        display: grid;
+        place-items: center;
+    }
+</style>
+<body>
+    <div id="dashboard">
+    <h1>User Registration</h1>
+    <form action="register.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="password">Password (min 8 characters):</label>
+        <input type="password" name="password" minlength="8" required><br>
+
+        <label for="course_code">Course Code:</label>
+        <input type="text" name="course_code" required><br>
+
+        <input type="submit" value="Register">
+    </form>
+    </div>
+</body>
+</html>
