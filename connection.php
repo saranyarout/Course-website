@@ -10,7 +10,7 @@ if(!$conn){
 else{
     echo"connected";
 }
-$table="CREATE TABLE data ('Sno' INT(6) NOT NULL AUTO_INCREMENT,'Name'VARCHAR(12) NOT NULL,'Password' VARCHAR(128) ,'Email' VARCHAR(128) NOT NULL)";
+$table="CREATE TABLE registation_details('Name'VARCHAR(50) NOT NULL,'Password' VARCHAR(8) ,'Email' VARCHAR(150) NOT NULL,'subcode' VARCHAR(10) NOT NULL)";
 $create=mysqli_query($conn,$table);
 if(!$create){
     echo"cannot create table";
