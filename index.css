@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+input,
+button,
+textarea,
+select,
+a {
+  font-family: inherit;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+%reset-Button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+&::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+button{
+    border:none;
+}
+
+:root {
+  --clr-white: #ffffff;
+  --clr-white-100: #ffffffde;
+  --clr-dark-400: #1c1c1c;
+  --clr-dark-300: #262626;
+  --clr-dark-200: #303030;
+  --clr-dark-100: #3a3a3a;
+  --clr-violet-50: #b7baff;
+  --clr-violet-100: #767bff;
+  --clr-violet-200: #585cbb;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--clr-dark-400);
+  color: var(--clr-white);
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+main {
+  overflow: hidden;
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-dark-200);
+  border-radius: 3rem;
+}
+
+/* Navbar Section  */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-dark-300);
+  padding-inline: 2rem;
+}
+
+.navTypeface {
+  max-height: 60px;
+  padding: 0.5rem;
+}
+.navOptions {
+  list-style: none;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-right: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-white-100);
+  /* font-weight: 400; */
+  font-size: 0.95rem;
+  transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+li {
+  transition: transform 0.2s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.015);
+}
+a:hover {
+  color: var(--clr-violet-50);
+  /* font-weight: 600; */
+}
+
+.left {
+  font-size: 2.5rem;
+}
+.firstSection {
+  display: flex;
+  padding: 5rem;
+  padding-top: 5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.firstSection > div {
+  width: 20%;
+}
+.leftSection {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+  font-size: 2.5rem;
+  flex-grow: 1;
+}
+.leftSection .btn {
+  background-color: rgba(250, 5, 185, 0.512);
+  color: rgb(18, 1, 1);
+  border: 2px solid rgb(251, 247, 247);
+  border-radius: 6px;
+  padding: 10px;
+}
+.landingFig {
+  width: 40vw;
+}
+.btn_solid {
+    box-sizing: border-box;
+
+  background-color: var(--clr-violet-200);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  padding-inline: 1.5rem;
+  transition: color 0.2s ease-in-out,
+                background-color 0.2s ease-in-out;
+border: 0.1rem solid var(--clr-violet-200);
+border-radius: 0.5rem;
+}
+
+.btn_solid:hover{
+    color: var(--clr-violet-50);
+    border: 0.1rem solid var(--clr-violet-50);
+    border-radius: 0.5rem;
+    background-color: transparent;
+    box-sizing: border-box;
+
+}
+
+
+.btn_outline {
+    background-color: transparent;
+    color: var(--clr-white-100);
+    border: solid var(--clr-white-100) 0.125rem;
+    font-size: inherit;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    padding-inline: 1.5rem;
+    transition: color 0.2s ease-in-out,
+                border 0.2s ease-in-out;
+}
+
+.btn_outline:hover{
+    color: var(--clr-violet-50);
+    border-color: var(--clr-violet-50);
+}
+
+.hl_text{
+    background-color: var(--clr-violet-200);
+    color: white;
+    padding: 0.5rem;
+    padding-inline: 1rem ;
+    font-size: 0.7rem;
+    border-radius: 2rem;
+    width: fit-content;
+    width: -moz-fit-content;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+
+}
+
+.subText{
+    font-size: 0.8rem;
+    color: var(--clr-white-100);
+    opacity: 0.8;
+    letter-spacing: 0.035rem;
+    font-weight: 300;
+}
