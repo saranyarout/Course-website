@@ -137,6 +137,12 @@ main {
   height: 100svh;
 }
 
+header{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 /* Navbar Section  */
 
 nav {
