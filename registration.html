@@ -4,20 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg" href="/favicon.svg">
+    <link rel="stylesheet" href="index.css">
+
 
     <title>User Registration</title>
 </head>
-<style>
-    body{
-        background-color: #0c0116;
-        color: white;
-        display: grid;
-        place-items: center;
-    }
-</style>
-<body>
+
+<body class="centerDiv">
+    <div class="formBox">
     <h1>User Registration</h1>
-    <form action="register.php" method="post">
+    <form class="formLayout"  action="register.php" method="post">
         <label for="name">Name:</label>
         <input type="text" name="name" required><br>
 
@@ -30,7 +26,7 @@
         <label for="course_code">Course Code:</label>
         <input type="text" name="course_code" required><br>
 
-        <input type="submit" value="Register">
+        <button class="btn_solid" type="submit" >Register</button>
     </form>
     </div>
 </body>

@@ -77,6 +77,7 @@ button{
   --clr-violet-50: #b7baff;
   --clr-violet-100: #767bff;
   --clr-violet-200: #585cbb;
+  --clr-violet-300: #4d4f9f;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -93,6 +94,15 @@ button{
     scroll-behavior: auto !important;
   }
 }
+
+/* input,
+input:focus,
+button:focus,
+select:focus {
+      outline: 0;
+      background-color: transparent;
+      border: none;
+    } */
 
 body {
   margin: 0;
@@ -118,6 +128,13 @@ main {
 ::-webkit-scrollbar-thumb {
   background-color: var(--clr-dark-200);
   border-radius: 3rem;
+}
+
+.centerDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
 }
 
 /* Navbar Section  */
@@ -211,11 +228,15 @@ border: 0.1rem solid var(--clr-violet-200);
 border-radius: 0.5rem;
 }
 
+button, a{
+  cursor: pointer;
+}
+
 .btn_solid:hover{
-    color: var(--clr-violet-50);
-    border: 0.1rem solid var(--clr-violet-50);
+    /* color: var(--clr-violet-50); */
+    border: 0.1rem solid var(--clr-violet-300);
     border-radius: 0.5rem;
-    background-color: transparent;
+    background-color: var(--clr-violet-300);
     box-sizing: border-box;
 
 }
@@ -260,4 +281,46 @@ border-radius: 0.5rem;
     opacity: 0.8;
     letter-spacing: 0.035rem;
     font-weight: 300;
+}
+
+.formBox{
+  background-color: var(--clr-dark-300);
+  height: fit-content;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 30svw;
+}
+
+.formLayout{
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  align-self: flex-start;
+  width: 100%;
+
+}
+
+label{
+  font-size: 0.85rem;
+  color: var(--clr-white-100);
+  opacity: 0.8;
+}
+
+input{
+  background-color: transparent;
+  outline: 0.125rem solid var(--clr-dark-100);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  border: none;
+  transition: outline-color 0.2s ease-in;
+  color: white;
+}
+
+input:focus, input:active, input:focus{
+  outline-color: var(--clr-white-100);
 }
